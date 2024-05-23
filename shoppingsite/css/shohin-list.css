@@ -1,0 +1,328 @@
+body {
+  width: 99%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden; /* 横スクロールを防ぐ */
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.total{
+  margin: 0;
+}
+
+/*パンくずリスト*/
+.breadcrumb-001 {
+  display: flex;
+  gap: 0 22px;
+  list-style: none;
+  padding: 0;
+  font-size: .9em;
+  padding-top: 0%;
+}
+
+.breadcrumb-001 li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-001 li:first-child::before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11.7%207.5%204%2013.8v6.8c0%20.4.3.7.7.7h4.7c.4%200%20.7-.3.7-.7v-4c0-.4.3-.7.7-.7h2.7c.4%200%20.7.3.7.7v4c0%20.4.3.7.7.7h4.7c.4%200%20.7-.3.7-.7v-6.8l-7.7-6.3h-.9zm12.1%204.4L20.3%209V3.2c0-.3-.2-.5-.5-.5h-2.3c-.3%200-.5.2-.5.5v2.9L13.3%203c-.7-.6-1.8-.6-2.5%200L.2%2011.8c-.2.2-.3.5-.1.7l1.1%201.3c.2.2.5.2.7.1l9.8-8.1h.6l9.8%208.1c.2.2.5.1.7-.1l1.1-1.3c.2-.2.1-.5-.1-.6z%22%20style%3D%22fill%3A%23333333%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.breadcrumb-001 li:not(:last-child)::after {
+  display: inline-block;
+  transform: rotate(45deg);
+  width: .3em;
+  height: .3em;
+  margin-left: 10px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  content: '';
+}
+.heart{
+  margin-top: 10px;
+  display: flex;
+}
+
+/*BODY*/
+.breadcrumb-001 a {
+  color: #333333;
+  text-decoration: none;
+}
+a{
+  color: #447ac5;
+  text-decoration: none;
+}
+.ex{
+  margin: 0;
+}
+
+.shohin-item {
+  padding: 100px;
+  margin-block-start: 0;
+  margin-block-end:200px;
+  float: left; /* 左側に配置 */
+  width: 50%; /* 左半分の幅 */
+  padding-top: 0%;
+
+  box-sizing: border-box; /* パディングとボーダーを要素の合計幅に含める */
+}
+
+.shohin-shosai{
+  text-align: left;
+  float: right; /* 右側に配置 */
+  width: 50%; /* 右半分の幅 */
+  padding-top: 0%;
+  box-sizing: border-box; /* パディングとボーダーを要素の合計幅に含める */
+}
+
+.shohin-gaiyo {
+  float: right; /* 右側に配置 */
+  box-sizing: border-box; /* パディングとボーダーを要素の合計幅に含める */
+}
+
+.footer {
+  position: absolute; /* 要素の位置を絶対的に指定 */
+  bottom: 0; /* 要素を下端に配置 */
+  width: 100%; /* 要素の幅を100%に指定 */
+  height: 50px; /* 要素の高さを50pxに指定 */
+  box-sizing: border-box; /* パディングとボーダーを要素の合計幅に含める */
+}
+/*フォント*/
+.font1{
+  font-size: 3em;
+  font-family:Comic Sans MS;
+  line-height: 0.5;
+  margin: 0 auto;
+}
+.style{/*ハートアイコン*/
+  margin-top: 20px;
+  display: flex;
+}
+.font2{
+  margin: 25px;
+  font-size: 2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: red;
+  line-height: 0.2px;
+}
+.font3{
+  font-size: 1.1em;
+  padding-top: 1em;
+  line-height: 1px;
+}
+.font4,.font44{
+  line-height: 1px;
+  color: red;
+  font-size: 0.9em;
+}
+.position{
+  line-height: 3px;
+}
+
+.saize, .print{
+  font-family:Comic Sans MS;
+  line-height: 0.1px;
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+.saize:before, .saize:after,
+.print:before, .print:after{
+  content:'';
+  position: absolute;
+  top:50%;
+  display: inline-block;
+  width: 15px;
+  height:1.5px;
+  background-color: #666;
+}
+.saize:before, .print:before{
+  left: 0;
+}
+.saize:after, .print:after{
+  right: 0;
+}
+
+
+.hasso, .soryo, .siharai,.mitumori {
+  line-height: 0.2px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/*テーブル*/
+table{
+  table-layout: fixed;  /* table要素に指定することで、幅を固定 */
+  width: 45%;
+}
+table , td, th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+  writing-mode: horizontal-tb;
+}
+td, th {
+	padding: 3px;
+	width: 30px;
+	height: 25px;
+}
+th {
+	background: rgb(209, 224, 247);
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
+
+/*お気に入り*/
+.choice-list {
+  margin: 0;
+  display: block;
+  padding: 0;
+}
+
+.checkbox {
+  text-align: left;
+  float: left;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  display: block;
+  background-color:rgb(247, 229, 239);
+  margin: 0;
+  -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+  -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+  -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+  transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+}
+
+.checkbox:hover {
+  background-color:rgb(247, 229, 239);
+}
+
+.checkbox:hover:after {
+  color: red;/*チェック前マウス*/
+}
+
+.checkbox:after {
+  line-height: 55px;
+  font-family: "FontAwesome";
+  display: block;
+  content: "\f004"; /* ハートアイコン */
+  color: rgba(255, 255, 255, 0.5);/*チェック前ハートの中*/
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  font-size: 15px;
+  -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+  -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+  -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+  transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+}
+
+.checkbox.is-checked:after {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  font-size: 32px;
+  color: red;
+}
+
+.checkbox.is-checked:hover:after {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/* お気に入り(既) */
+.choice-list1 {
+  margin: 0;
+  display: block;
+  padding: 0;
+}
+
+.checkbox1 {
+  text-align: left;
+  float: left;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  display: block;
+  background-color: rgb(247, 229, 239);
+  margin: 0;
+  -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+  -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+  -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+  transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
+}
+
+.checkbox1:hover {
+  background-color: rgb(247, 229, 239);
+}
+
+.checkbox1:hover:after {
+  color: red; /* チェック前マウス */
+}
+
+.checkbox1:after {
+  line-height: 30px;
+  font-family: "FontAwesome";
+  display: block;
+  content: "\f004"; /* ハートアイコン */
+  color: red; /* チェック前ハートの中 */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  font-size: 32px;
+  -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+  -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+  -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+  transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5), font-size 0.35s cubic-bezier(0.5, 0, 0, 3);
+}
+
+.checkbox1.is-checked1:after {
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  font-size: 15px;
+  color: white;
+}
+
+.checkbox1.is-checked1:hover:after {
+  -moz-transform: scale(0.45);
+  -ms-transform: scale(0.45);
+  -webkit-transform: scale(0.45);
+  transform: scale(0.45);
+}
