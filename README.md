@@ -1,7 +1,7 @@
 # グループ開発：オリジナルTシャツ通販サイト
-サイト名：チュンT
-https://aso2201236.girlfriend.jp/php2/shoppingsite/home.php
-管理者側サイト
+サイト名：チュンT<br>
+https://aso2201236.girlfriend.jp/php2/shoppingsite/home.php<br>
+管理者側サイト<br>
 https://2201229.sunnyday.jp/php2/pj/admin.php
 # システム化の目的
 目的<br>
