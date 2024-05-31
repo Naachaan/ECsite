@@ -1,4 +1,5 @@
 # グループ開発：オリジナルTシャツ通販サイト
+サイト名：チュンT
 https://aso2201236.girlfriend.jp/php2/shoppingsite/home.php
 # システム化の目的
 目的<br>
