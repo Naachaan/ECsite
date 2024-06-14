@@ -33,9 +33,8 @@
         echo '</div>'; // Closing the .content div
         echo '</div>';
         echo '</div>'; // Closing the .product-container div
-        }
         echo '<p><a href="order-detail.php?id='.$row['order_id'].'"><img src="./image/undo.png" alt="Detail" width="30" height="30"></a></p>';
-    
+    }
         ?>
     </div> 
 <?php require 'footer.php'; ?>  

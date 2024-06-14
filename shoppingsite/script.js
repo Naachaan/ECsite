@@ -9,14 +9,26 @@ btn.onclick = () => {
 mask.onclick = () => {
   nav.classList.toggle("open");
 };
-$(function(){
-  $(".slideshow-fade li").css({"position":"relative","overflow":"hidden"});
-  $(".slideshow-fade li").hide().css({"position":"absolute","top":0,"left":0});
-  $(".slideshow-fade li:first").addClass("fade").show();
-  setInterval(function(){
-    var $active = $(".slideshow-fade li.fade");
-    var $next = $active.next("li").length?$active.next("li"):$(".slideshow-fade li:first");
-    $active.fadeOut(1000).removeClass("fade");
-    $next.fadeIn(1000).addClass("fade");
-  },2000);
-});
+
+function calculateSubtotal(subtotalId, quantityInputId, priceId) {
+  var quantity = parseInt(document.getElementById(quantityInputId).value) || 0;
+  var price = parseFloat(document.getElementById(priceId).innerText.replace('￥', '')) || 0;
+
+  if (!isNaN(quantity) && !isNaN(price)) {
+      var subtotal = quantity * price;
+      document.getElementById(subtotalId).textContent = subtotal;
+  }
+  calculateTotalQuantity();  // 合計数量も再計算
+}
+
+function calculateTotalQuantity() {
+  var quantityS = parseInt(document.getElementById('quantityInputS').value) || 0;
+  var quantityM = parseInt(document.getElementById('quantityInputM').value) || 0;
+  var quantityL = parseInt(document.getElementById('quantityInputL').value) || 0;
+  var quantityXL = parseInt(document.getElementById('quantityInputXL').value) || 0;
+  var quantityXXL = parseInt(document.getElementById('quantityInputXXL').value) || 0;
+
+  var totalQuantity = quantityS + quantityM + quantityL + quantityXL + quantityXXL;
+
+  document.getElementById('totalQuantity').innerText = totalQuantity;
+}

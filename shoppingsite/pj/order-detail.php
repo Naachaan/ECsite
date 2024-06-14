@@ -39,6 +39,7 @@
         echo '</div>'; // Closing the .product-container div
         echo '<p><a href="ad-order.php"><img src="./image/undo.png" alt="Detail" width="30" height="30"></a></p>';
     }
+
         ?>
     </div> 
 <?php require 'footer.php'; ?>  

@@ -12,7 +12,6 @@ if (isset($_SESSION['product'][$id])){
 }
 
 $_SESSION['product'][$id]=[
-    'id' => $id,
     'name' => $_POST['name'], // 商品名
     'image' => $_POST['image'],
     'processingFee' => $_POST['processingFee'],// 加工費

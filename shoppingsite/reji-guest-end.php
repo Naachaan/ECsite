@@ -57,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
         <h2>商品の購入が完了しました。<br></h2>
         <h2>購入ありがとうございました。<br></h2>
         <h2><a href="home.php">購入</a>を続ける</h2>
-        <h2><a href="create.php">オリジナルTシャツ作成手順はこちら</a></h2>
     </div>
     <?php
     unset($_SESSION['product']);
